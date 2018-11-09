@@ -21,7 +21,7 @@
 <style lang='less'>
     #header{
         padding:5px 70px;
-        height: 140px;
+        height: 100px;
         position: fixed;
         top: 0;
         left: 0;
@@ -30,13 +30,13 @@
         z-index: 999;
         #logo{
             float: left;
-            width: 100px;
-            height: 130px;
+            width: 68px;
+            height: 80px;
         }
         #title{
             font-size: 36px;
-            height: 140px;
-            line-height: 140px;
+            height: 100px;
+            line-height: 100px;
             text-align: center;
         }
     }

@@ -1,7 +1,7 @@
 <template>
  <div id='menu'>
      <ul>
-         <router-link tag='li' to='/index' exact>学籍数据</router-link>
+         <router-link tag='li' to='/index'>学籍数据</router-link>
          <router-link tag='li' to='/score'>成绩数据</router-link>
          <router-link tag='li' to='/course'>课程数据</router-link>
          <router-link tag='li' to='/abroad'>出国数据</router-link>
@@ -33,7 +33,7 @@
     @theme : #00B1DD;
     #menu{
         position: fixed;
-        top: 140px;
+        top: 100px;
         left: 0;
         width: 100%;
         background-color: #f5f5f5;

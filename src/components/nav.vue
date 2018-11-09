@@ -5,7 +5,7 @@
         <input type="text" placeholder="Search" class="form-control" >
      </div>
      <ul id='subMenu'>
-         <li v-for='item in menu' :class='{active:item.name=="学籍状态"}'><span class="glyphicon" :class='item.icon'></span> &nbsp;&nbsp;{{item.name}}</li>
+         <router-link v-for='(item,index) in menu' :key="index" :to='{path:item.path}' tag='li'  :class='{active:item.name=="学籍状态"}' exact><span class="glyphicon" :class='item.icon'></span> &nbsp;&nbsp;{{item.name}}</router-link>
      </ul>
      <div id='copyright'>
          copyright © by Shanghai University <br>
@@ -31,7 +31,7 @@
 <style lang='less'>
     #nav{
         position: fixed;
-        top: 192px;
+        top: 152px;
         bottom: 0;
         left: 0;
         width: 300px;
@@ -65,11 +65,11 @@
                 color:#00B1DD;
                 font-size: 16px;
                 cursor: pointer;
-                &.active{
+                &.router-link-active{
                     background-color: #00B1DD;
                     color:white;
                 }
-                &:not(.active):hover{
+                &:not(.router-link-active):hover{
                     background-color: #f1f1f1;
                 }
             }

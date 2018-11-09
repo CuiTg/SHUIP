@@ -23,7 +23,7 @@ export default {
       data:'hello World',
       showMask:false,
       nowPage:'index',
-      menuData:[{name:'学籍状态',icon:'glyphicon-stats'},{name:'超学制数据',icon:'glyphicon-education'},{name:'学籍异动',icon:'glyphicon-send'},{name:'类别数据',icon:'glyphicon-th-list'},{name:'校区分布人数',icon:'glyphicon-globe'}]
+      menuData:[{name:'学籍状态',icon:'glyphicon-stats',path:'/index'},{name:'超学制数据',icon:'glyphicon-education',path:'/index/chaoxuezhi'},{name:'学籍异动',icon:'glyphicon-send',path:'/index/yidong'},{name:'类别数据',icon:'glyphicon-th-list',path:'/index/leibie'},{name:'校区分布人数',icon:'glyphicon-globe',path:'/index/xiaoqufenbu'}]
     }
   },
   computed:{
@@ -33,7 +33,7 @@ export default {
       var myMenu = this.menuData;
       switch(this.nowPage){
       case 'index':
-      myMenu = [{name:'学籍状态',icon:'glyphicon-stats'},{name:'超学制数据',icon:'glyphicon-education'},{name:'学籍异动',icon:'glyphicon-send'},{name:'类别数据',icon:'glyphicon-th-list'},{name:'校区分布人数',icon:'glyphicon-globe'}];
+      myMenu = [{name:'学籍状态',icon:'glyphicon-stats',path:'/index'},{name:'超学制数据',icon:'glyphicon-education',path:'/index/chaoxuezhi'},{name:'学籍异动',icon:'glyphicon-send',path:'/index/yidong'},{name:'类别数据',icon:'glyphicon-th-list',path:'/index/leibie'},{name:'校区分布人数',icon:'glyphicon-globe',path:'/index/xiaoqufenbu'}]
       break;
       case 'score':
         myMenu= [{name:'成绩状态',icon:'glyphicon-stats'},{name:'学分状态',icon:'glyphicon-education'},{name:'成绩预警',icon:'glyphicon-send'}];
@@ -48,7 +48,6 @@ export default {
         myMenu= [{name:'总体毕业数据',icon:'glyphicon-stats'},{name:'专业硕士',icon:'glyphicon-education'},{name:'学术硕士',icon:'glyphicon-send'},{name:'博士',icon:'glyphicon-th-list'},{name:'博士留学',icon:'glyphicon-globe'}];
         break;
       }
-      console.log(myMenu);
       return myMenu;
     }
   },
@@ -97,7 +96,7 @@ export default {
 <style lang='less'>
     .body{
     position: absolute;
-    top: 190px;
+    top: 150px;
     left: 0;
     right: 0;
   }
